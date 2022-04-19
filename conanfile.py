@@ -185,6 +185,7 @@ class AndroidNDKLocalConan(ConanFile):
         # test shall pass, so this runs also in the build as build requirement context
         # ndk-build: https://developer.android.com/ndk/guides/ndk-build
         self.env_info.PATH.append(self.package_folder)
+        self.env_info.PATH.append(os.environ['ANDROID_NDK_HOME'])
 
         # You should use the ANDROID_NDK_ROOT environment variable to indicate where the NDK is located.
         # That's what most NDK-related scripts use (inside the NDK, and outside of it).
