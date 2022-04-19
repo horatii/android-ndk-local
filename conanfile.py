@@ -123,7 +123,7 @@ class AndroidNDKLocalConan(ConanFile):
 
     @property
     def _ndk_root(self):
-        return os.path.join(self.package_folder, "toolchains", "llvm", "prebuilt", self._host)
+        return os.path.join(os.environ['ANDROID_NDK_HOME'], "toolchains", "llvm", "prebuilt", self._host)
 
     def _wrap_executable(self, tool):
         suffix = ".exe" if self.settings_build.os == "Windows" else ""
@@ -241,7 +241,7 @@ class AndroidNDKLocalConan(ConanFile):
         self.output.info(f"Creating CONAN_CMAKE_PROGRAM environment variable: {cmake_wrapper}")
         self.env_info.CONAN_CMAKE_PROGRAM = cmake_wrapper
 
-        toolchain = os.path.join(self.package_folder, "build", "cmake", "android.toolchain.cmake")
+        toolchain = os.path.join(os.environ['ANDROID_NDK_HOME'], "build", "cmake", "android.toolchain.cmake")
         self.output.info(f"Creating CONAN_CMAKE_TOOLCHAIN_FILE environment variable: {toolchain}")
         self.env_info.CONAN_CMAKE_TOOLCHAIN_FILE = toolchain
 
