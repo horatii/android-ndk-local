@@ -1,0 +1,15 @@
+sources:
+  r24:
+    url:
+      Linux:
+        x86_64:
+          sha256: caac638f060347c9aae994e718ba00bb18413498d8e0ad4e12e1482964032997
+          url: https://dl.google.com/android/repository/android-ndk-r24-linux.zip
+      Macos:
+        x86_64:
+          sha256: 162a7000515be07489f2ed70d6d3a117d236150f83f3fcb601c163349429ba23
+          url: https://dl.google.com/android/repository/android-ndk-r24-darwin.zip
+      Windows:
+        x86_64:
+          sha256: b2a9fab1481c3c21df0b78608747dde0747b50890134a62a81c983a5250066d6
+          url: https://dl.google.com/android/repository/android-ndk-r24-windows.zip
